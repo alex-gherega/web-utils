@@ -1,5 +1,5 @@
 (set-env!
- :source-paths    #{"src/cljs"}
+ :source-paths    #{"src/cljs/web_utils"}
  :resource-paths  #{"resources"}
  :dependencies '[[adzerk/boot-cljs          "1.7.228-2"  :scope "test"]
                  [adzerk/boot-cljs-repl     "0.3.3"      :scope "test"]
@@ -25,12 +25,11 @@
  '[adzerk.bootlaces :refer :all]
  )
 
-(def +version+ "0.0.1-SNAPSHOT")
+(def +version+ "0.0.2-SNAPSHOT")
 (bootlaces! +version+ :dont-modify-paths? true :ensure-clean false)
 
 (task-options!
 ;;  push {:repo           "https://clojars.org/repo"
-;;        :jar            "cucu.jar"
 ;;        :ensure-branch  "master"
 ;;        :ensure-clean   true
 ;;        :ensure-tag     (last-commit)
