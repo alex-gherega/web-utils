@@ -25,7 +25,7 @@
  '[adzerk.bootlaces :refer :all]
  )
 
-(def +version+ "0.0.2-SNAPSHOT")
+(def +version+ "0.0.3")
 (bootlaces! +version+ :dont-modify-paths? true :ensure-clean false)
 
 (task-options!
