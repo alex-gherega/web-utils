@@ -13,7 +13,7 @@
                  [crisptrutski/boot-cljs-test "0.3.0" :scope "test"]
                  [reagent "0.6.0"]])
 
-(set-env! :repositories [["clojars" {:url "https://clojars.org/repo/"}]])
+;(set-env! :repositories [["clojars" {:url "https://clojars.org/repo/"}]])
 
 (require
  '[adzerk.boot-cljs      :refer [cljs]]
@@ -26,15 +26,16 @@
  )
 
 (def +version+ "0.0.1")
-;(bootlaces! +version+ :dont-modify-paths? true)
+(bootlaces! +version+ :dont-modify-paths? true :ensure-clean false)
 
 (task-options!
- push {:repo           "https://clojars.org/repo"
-       :ensure-branch  "master"
-       :ensure-clean   true
-       :ensure-tag     (last-commit)
-       :ensure-version +version+}
- pom  {:project        'web-utils
+;;  push {:repo           "https://clojars.org/repo"
+;;        :jar            "cucu.jar"
+;;        :ensure-branch  "master"
+;;        :ensure-clean   true
+;;        :ensure-tag     (last-commit)
+;;        :ensure-version +version+}
+pom  {:project        'web-utils
        :version        +version+
        :description    ""
        :url            "https://github.com/alex-gherega/web-utils"
