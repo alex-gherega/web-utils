@@ -39,7 +39,7 @@
 
 (deftask development []
   (task-options! cljs {:optimizations :none}
-                 reload {:on-jsload 'web-utils.app/init})
+                 reload {:on-jsload 'app/init})
   identity)
 
 (deftask dev

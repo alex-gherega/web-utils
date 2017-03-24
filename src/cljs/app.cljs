@@ -1,4 +1,4 @@
-(ns web-utils.app
+(ns app
   (:require [reagent.core :as reagent :refer [atom]]))
 
 (defn some-component []
