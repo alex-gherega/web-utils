@@ -11,10 +11,9 @@
                  [weasel                    "0.7.0"      :scope "test"]
                  [org.clojure/clojurescript "1.9.293"]
                  [crisptrutski/boot-cljs-test "0.3.0" :scope "test"]
-                 [reagent "0.6.0"]]
- 
-  ;:repositories '[["clojars" {:url "https://clojars.org/repo/"}]]
- )
+                 [reagent "0.6.0"]])
+
+(set-env! :repositories [["clojars" {:url "https://clojars.org/repo/"}]])
 
 (require
  '[adzerk.boot-cljs      :refer [cljs]]
@@ -27,7 +26,7 @@
  )
 
 (def +version+ "0.0.1")
-(bootlaces! +version+ :dont-modify-paths? true)
+;(bootlaces! +version+ :dont-modify-paths? true)
 
 (task-options!
  push {:repo           "deploy"
@@ -35,7 +34,7 @@
        :ensure-clean   true
        :ensure-tag     (last-commit)
        :ensure-version +version+}
- pom  {:project        'adzerk/bootlaces
+ pom  {:project        'web-utils
        :version        +version+
        :description    ""
        :url            "https://github.com/alex-gherega/web-utils"
