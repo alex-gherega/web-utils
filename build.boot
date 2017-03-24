@@ -29,7 +29,7 @@
 ;(bootlaces! +version+ :dont-modify-paths? true)
 
 (task-options!
- push {:repo           "deploy"
+ push {:repo           "https://clojars.org/repo"
        :ensure-branch  "master"
        :ensure-clean   true
        :ensure-tag     (last-commit)
