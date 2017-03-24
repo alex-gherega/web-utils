@@ -35,11 +35,11 @@
 ;;        :ensure-tag     (last-commit)
 ;;        :ensure-version +version+}
 pom  {:project        'web-utils
-       :version        +version+
-       :description    ""
-       :url            "https://github.com/alex-gherega/web-utils"
-       :scm            {:url "https://github.com/alex-gherega/web-utils"}
-       :license        {"Eclipse Public License" "http://www.eclipse.org/legal/epl-v10.html"}})
+      :version        +version+
+      :description    ""
+      :url            "https://github.com/alex-gherega/web-utils"
+      ;:scm            {:url "https://github.com/alex-gherega/web-utils"}
+      :license        {"Eclipse Public License" "http://www.eclipse.org/legal/epl-v10.html"}})
 
 (deftask build []
   (comp (speak)
